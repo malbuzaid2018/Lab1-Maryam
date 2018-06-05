@@ -1,5 +1,8 @@
 package hw;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzz {
 
   public static void fizzbuzz(int num) {
@@ -44,4 +47,29 @@ public class FizzBuzz {
 
   }
 
+  public static List<String> fizzBuzzList(final int n) {
+
+    List<String> fizzbuzzArr = new ArrayList<String>();
+
+    if (n <= 0) {
+      fizzbuzzArr.add("You must enter a positive integer > 0");
+    }
+    else {
+      for (int i=1; i<n; i++) {
+        if ((i%3 == 0) && (i%5 == 0)) {
+          fizzbuzzArr.add("fizz buzz");
+        } else if (i%3 == 0) {
+          fizzbuzzArr.add("fizz");
+        } else if (i%5 == 0) {
+          fizzbuzzArr.add("buzz");
+        } else {
+          fizzbuzzArr.add(String.valueOf(i));
+        }
+      }
+    }
+
+    return fizzbuzzArr;
+
+  }
 }
+

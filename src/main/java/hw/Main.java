@@ -14,7 +14,7 @@ public class Main {
           System.err.println("The argument entered cannot a negative integer");
         }
         else {
-          FizzBuzz.fizzbuzz(num);
+          FizzBuzz.fizzBuzzList(num);
         }
       }
       catch(NumberFormatException e) {

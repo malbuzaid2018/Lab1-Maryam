@@ -6,7 +6,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestFizzBuzz {
+import java.util.ArrayList;
+import java.util.List;
+
+ public class TestFizzBuzz {
 
   private FizzBuzz fixture;
 
@@ -22,37 +25,62 @@ public class TestFizzBuzz {
 
   @Test
   public void testNegativeTen() {
-    String[] expectedVals = {"You must enter a positive integer > 0"};
-    assertArrayEquals(expectedVals, fixture.fizzBuzz(-10));
+    List<String> expectedVals = new ArrayList<String>();
+    expectedVals.add("You must enter a positive integer > 0");
+    assertEquals(expectedVals, fixture.fizzBuzzList(-10));
   }
 
   @Test
   public void testNegativeOne() {
-    String[] expectedVals = {"You must enter a positive integer > 0"};
-    assertArrayEquals(expectedVals, fixture.fizzBuzz(-1));
+    List<String> expectedVals = new ArrayList<String>();
+    expectedVals.add("You must enter a positive integer > 0");
+    assertEquals(expectedVals, fixture.fizzBuzzList(-1));
   }
 
   @Test
   public void testZero() {
-    String[] expectedVals = {"You must enter a positive integer > 0"};
-    assertArrayEquals(expectedVals, fixture.fizzBuzz(0));
+    List<String> expectedVals = new ArrayList<String>();
+    expectedVals.add("You must enter a positive integer > 0");
+    assertEquals(expectedVals, fixture.fizzBuzzList(0));
   }
 
   @Test
   public void testOne() {
-    String[] expectedVals = {};
-    assertArrayEquals(expectedVals, fixture.fizzBuzz(1));
+    List<String> expectedVals = new ArrayList<String>();
+    assertEquals(expectedVals, fixture.fizzBuzzList(1));
   }
 
   @Test
   public void testSeven() {
-    String[] expectedVals = {"1", "2", "fizz", "4", "buzz", "fizz"};
-    assertArrayEquals(expectedVals, fixture.fizzBuzz(7));
+    List<String> expectedVals = new ArrayList<String>();
+    expectedVals.add("1");
+    expectedVals.add("2");
+    expectedVals.add("fizz");
+    expectedVals.add("4");
+    expectedVals.add("buzz");
+    expectedVals.add("fizz");
+    assertEquals(expectedVals, fixture.fizzBuzzList(7));
   }
 
   @Test
   public void testSeventeen() {
-    String[] expectedVals = {"1", "2", "fizz", "4", "buzz", "fizz", "7", "8", "fizz", "buzz", "11", "fizz", "13", "14", "fizz buzz", "16"};
-    assertArrayEquals(expectedVals, fixture.fizzBuzz(17));
+    List<String> expectedVals = new ArrayList<String>();
+    expectedVals.add("1");
+    expectedVals.add("2");
+    expectedVals.add("fizz");
+    expectedVals.add("4");
+    expectedVals.add("buzz");
+    expectedVals.add("fizz");
+    expectedVals.add("7");
+    expectedVals.add("8");
+    expectedVals.add("fizz");
+    expectedVals.add("buzz");
+    expectedVals.add("11");
+    expectedVals.add("fizz");
+    expectedVals.add("13");
+    expectedVals.add("14");
+    expectedVals.add("fizz buzz");
+    expectedVals.add("16");
+    assertEquals(expectedVals, fixture.fizzBuzzList(17));
   }
 }
