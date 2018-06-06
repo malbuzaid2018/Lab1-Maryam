@@ -5,6 +5,8 @@ import java.util.List;
 
 public class FizzBuzz {
 
+  /* fizzbuzz function which will simply the print output on screen */
+
   public static void fizzbuzz(int num) {
     for (int i=1; i<num; i++) {
       if ((i%3 == 0) && (i%5 == 0)) {
@@ -18,6 +20,8 @@ public class FizzBuzz {
       }
     }
   }
+
+  /* fizzbuzz function which will return the output in a string array */
 
   public static String[] fizzBuzz(final int n) {
 
@@ -46,6 +50,8 @@ public class FizzBuzz {
     return fizzbuzzArr;
 
   }
+
+  /* fizzbuzz function to return the output in a List of string */
 
   public static List<String> fizzBuzzList(final int n) {
 
